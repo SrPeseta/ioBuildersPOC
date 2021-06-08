@@ -1,0 +1,8 @@
+com/iobuilders/data/WalletStatsDto.class
+com/iobuilders/data/WalletStatsDto$WalletStatsDtoBuilder.class
+com/iobuilders/service/WalletServiceImpl.class
+com/iobuilders/data/WalletDto.class
+com/iobuilders/ports/spi/WalletBlockchainPort.class
+com/iobuilders/data/WalletDto$WalletDtoBuilder.class
+com/iobuilders/ports/api/WalletServicePort.class
+com/iobuilders/ports/spi/WalletPersistencePort.class
