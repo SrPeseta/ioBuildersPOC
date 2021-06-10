@@ -10,7 +10,7 @@ Para poder ejecutar la prueba de concepto necesitamos:
 - El programa de Ganache (versión 2.5.4) para simular una red blockchain.
 ## Cambios en el application.properties del artefacto walletMsLauncher
 ```
-spring.datasource.url=jdbc:postgresql://<HOST>:<puerto>/postgres
+spring.datasource.url=jdbc:postgresql://<HOST>:<puerto>/<DB>
 spring.datasource.username=<DB_USERNAME>
 spring.datasource.password=<DB_PASSWORD>
 web3j.client-address=<GANACHE_URL>
@@ -26,3 +26,32 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
 4. Tener cuentas en Ganache con algo de Ether.
 
 ## Endpoints de la API
+- /create
+  Método: GET
+  Query params:
+- /createWalletWithKey
+  Método: POST
+  Body:
+- /get/{id}
+  Método: GET
+  
+- /getContractBalance
+  Método: GET
+- /getAllWallets
+  Método: GET
+- /deposit
+  Método: GET
+  Query params:
+  - id
+  - amount
+- /withdraw
+  Método: GET
+  Query params:
+  - id
+  - amount
+- /transfer
+  Método: GET
+  Query params:
+  - from
+  - to
+  - amount
