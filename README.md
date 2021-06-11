@@ -28,6 +28,8 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
 4. Tener cuentas en Ganache con algo de Ether.
 5. Modificar los datos presentados anteriormente en el application.properties.
 6. Importar en Postman el [json](iobuilders.postman_collection.json)
+7. Levantar el microservicio.
+8. Probar peticiones con la API en el Postman.
 
 ## Endpoints de la API
 - <strong>/create</strong>
