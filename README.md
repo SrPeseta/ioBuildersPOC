@@ -29,33 +29,33 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
 5. Modificar los datos presentados anteriormente en el application.properties.
 
 ## Endpoints de la API
-- /create
+- <strong>/create</strong>
   
   Método: GET
   
   Crea un wallet con una clave privada aleatoria.
-- /createWalletWithKey
+- <strong>/createWalletWithKey</strong>
 
   Método: POST
   Body: una cadena de caracteres con la clave privada de la cuenta.
   
   Crea un wallet con la clave privada que le pases en el cuerpo de la petición.
-- /get/{id}
+- <strong>/get/{id}</strong>
 
   Método: GET
   
   Obtiene estadísticas o datos relevantes del wallet. El id se debe reemplazar por el id de la base de datos del wallet que quieres consultar las estadísticas.
-- /getContractBalance
+- <strong>/getContractBalance</strong>
 
   Método: GET
   
   Obtiene el balance del contrato (número de tokens).
-- /getAllWallets
+- <strong>/getAllWallets</strong>
 
   Método: GET
   
   Obtiene todos los wallets en la base de datos y los devuelve.
-- /deposit
+- <strong>/deposit</strong>
 
   Método: GET
   
@@ -64,7 +64,7 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
   - amount: cantidad de tokens a depositar
 
   Deposita un número de tokens en el wallet.
-- /withdraw
+- <strong>/withdraw</strong>
 
   Método: GET
   
@@ -73,7 +73,7 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
   - amount: cantidad de tokens a sacar
 
   Saca un numero de tokens del wallet.
-- /transfer
+- <strong>/transfer</strong>
 
   Método: GET
   
