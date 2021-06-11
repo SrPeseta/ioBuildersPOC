@@ -1,8 +1,0 @@
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletInfrastructure/src/main/java/com/iobuilders/adapters/WalletJpaAdapter.java
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletInfrastructure/src/main/java/com/iobuilders/entity/WalletStats.java
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletInfrastructure/src/main/java/com/iobuilders/mappers/WalletStatsMapper.java
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletInfrastructure/src/main/java/com/iobuilders/entity/Wallet.java
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletInfrastructure/src/main/java/com/iobuilders/mappers/WalletMapper.java
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletInfrastructure/src/main/java/com/iobuilders/entity/EIP20.java
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletInfrastructure/src/main/java/com/iobuilders/adapters/WalletEthereumAdapter.java
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletInfrastructure/src/main/java/com/iobuilders/repository/WalletRepository.java
