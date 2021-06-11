@@ -1,6 +1,0 @@
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletDomain/src/main/java/com/iobuilders/data/WalletStatsDto.java
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletDomain/src/main/java/com/iobuilders/ports/spi/WalletBlockchainPort.java
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletDomain/src/main/java/com/iobuilders/data/WalletDto.java
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletDomain/src/main/java/com/iobuilders/ports/api/WalletServicePort.java
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletDomain/src/main/java/com/iobuilders/service/WalletServiceImpl.java
-/home/srpeseta/eclipse-workspace/walletMsLibrary/walletDomain/src/main/java/com/iobuilders/ports/spi/WalletPersistencePort.java
