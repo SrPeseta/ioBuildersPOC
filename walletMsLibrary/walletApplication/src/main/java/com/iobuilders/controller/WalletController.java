@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.web3j.protocol.core.methods.response.EthBlock;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
 
 import com.iobuilders.data.WalletDto;
@@ -36,9 +37,17 @@ public class WalletController {
 	}
 	
 	@PostMapping(path = "/createWalletWithKey", produces = "application/json")
-	public WalletDto createWalletWIthKey(@RequestBody String  key) {
-		logger.info("--> createWalletWIthKey");
+	public WalletDto createWalletWithKey(@RequestBody String  key) {
+		logger.info("--> createWalletWithKey");
 		return walletPort.createWalletWithKey(key);
+	}
+	
+	@GetMapping(path = "/getWalletTransactions/{id}",produces = "application/json")
+	public @ResponseBody List<EthBlock.TransactionResult> getWalletTransactions(@PathVariable String id) {
+		logger.info("--> getWalletTransactions " + id);
+		long idLong = Long.parseLong(id);
+		
+		return walletPort.getWalletTransactions(idLong);
 	}
 	
 	@GetMapping(path = "/get/{id}",produces = "application/json") //Balance y movimientos

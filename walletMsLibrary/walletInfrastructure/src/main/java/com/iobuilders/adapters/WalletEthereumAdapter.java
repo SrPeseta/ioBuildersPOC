@@ -16,11 +16,17 @@ import org.web3j.crypto.Keys;
 import org.web3j.crypto.RawTransaction;
 import org.web3j.crypto.TransactionEncoder;
 import org.web3j.protocol.Web3j;
+import org.web3j.protocol.core.DefaultBlockParameter;
 import org.web3j.protocol.core.DefaultBlockParameterName;
+import org.web3j.protocol.core.Request;
+import org.web3j.protocol.core.methods.response.EthBlock;
+import org.web3j.protocol.core.methods.response.EthBlock.TransactionResult;
+import org.web3j.protocol.core.methods.response.EthBlockNumber;
 import org.web3j.protocol.core.methods.response.EthGetBalance;
 import org.web3j.protocol.core.methods.response.EthGetTransactionCount;
 import org.web3j.protocol.core.methods.response.EthGetTransactionReceipt;
 import org.web3j.protocol.core.methods.response.EthSendTransaction;
+import org.web3j.protocol.core.methods.response.Transaction;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
 import org.web3j.protocol.http.HttpService;
 import org.web3j.utils.Convert;
@@ -35,8 +41,10 @@ import okhttp3.RequestBody;
 
 import java.io.IOException;
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -124,12 +132,6 @@ public class WalletEthereumAdapter implements WalletBlockchainPort{
 			e.printStackTrace();
 		}
 		return value;
-	}
-
-	@Override
-	public List<TransactionReceipt> getTransactions(WalletDto wallet) {
-		
-		return null;
 	}
 
 	@Override
@@ -266,5 +268,31 @@ public class WalletEthereumAdapter implements WalletBlockchainPort{
 			e.printStackTrace();
 		}
 		return value;
+	}
+
+	@Override
+	public List<EthBlock.TransactionResult> getWalletTransactions(WalletDto wallet) {
+		List<EthBlock.TransactionResult> finalTxs = new ArrayList<>();
+		try {
+			EthBlockNumber blocknum = web3.ethBlockNumber().send();
+			BigInteger n = blocknum.getBlockNumber();
+			Credentials creds = Credentials.create(wallet.getPrivateKey().toString());
+			
+			for(BigInteger i = BigInteger.valueOf(0); n.compareTo(i) >= 0; i = i.add(BigInteger.ONE)) {
+				logger.info("Iterating block " + i);
+				DefaultBlockParameter defaultBlockParameter = DefaultBlockParameter.valueOf(i);
+				EthBlock block = web3.ethGetBlockByNumber(defaultBlockParameter , true).send();
+				List<EthBlock.TransactionResult> transactions = block.getResult().getTransactions();
+				transactions.forEach(tx -> {
+					  EthBlock.TransactionObject transaction = (EthBlock.TransactionObject) tx.get();
+
+					  if(transaction.getFrom().equalsIgnoreCase(creds.getAddress()) || transaction.getTo().equalsIgnoreCase(creds.getAddress()))
+						  finalTxs.add(tx);
+					});
+			}
+		} catch (IOException e) {
+			logger.error("Error en getWalletTransactions",e);
+		}
+		return finalTxs;
 	}
 }

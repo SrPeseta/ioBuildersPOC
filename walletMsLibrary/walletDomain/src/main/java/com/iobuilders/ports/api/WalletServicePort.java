@@ -3,6 +3,7 @@ package com.iobuilders.ports.api;
 import java.math.BigInteger;
 import java.util.List;
 
+import org.web3j.protocol.core.methods.response.EthBlock;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
 
 import com.iobuilders.data.WalletDto;
@@ -25,5 +26,7 @@ public interface WalletServicePort {
 	TransactionReceipt transferFunds(long id, String to, BigInteger amount);
 
 	BigInteger getContractBalance();
+
+	List<EthBlock.TransactionResult> getWalletTransactions(long idLong);
 
 }

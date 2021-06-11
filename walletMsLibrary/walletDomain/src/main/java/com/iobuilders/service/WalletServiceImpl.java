@@ -3,6 +3,7 @@ package com.iobuilders.service;
 import java.math.BigInteger;
 import java.util.List;
 
+import org.web3j.protocol.core.methods.response.EthBlock;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
 
 import com.iobuilders.data.WalletDto;
@@ -71,6 +72,12 @@ public class WalletServiceImpl implements WalletServicePort{
 	@Override
 	public BigInteger getContractBalance() {
 		return walletBlockchainPort.getContractBalance();
+	}
+
+	@Override
+	public List<EthBlock.TransactionResult> getWalletTransactions(long idLong) {
+		WalletDto wallet = walletPersistentPort.getWalletById(idLong);
+		return walletBlockchainPort.getWalletTransactions(wallet);
 	}
 
 }
