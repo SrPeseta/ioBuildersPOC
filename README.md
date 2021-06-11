@@ -5,7 +5,7 @@ Para poder ejecutar la prueba de concepto necesitamos:
 - El IDE Eclipse.
 - La versión de Java 8.
 - Tener instalado el plugin de Spring en Eclipse
-- Incluir el jar de PostgreSQL de la raíz del repositorio en el classpath.
+- Incluir el [jar de PostgreSQL](postgresql-42.2.20.jar) de la raíz del repositorio en el classpath.
 - Una base de datos PostgreSQL (versión 12.7).
 - El programa de Ganache (versión 2.5.4) para simular una red blockchain.
 - Tener el programa Postman para realizar las peticiones a la API.
