@@ -83,3 +83,8 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
   - amount:cantidad de tokens a transferir.
   
   Transferencia de tokens de un wallet a una cuenta.
+- <strong>/getWalletTransactions/{id}</strong>
+
+  Método: GET
+
+  Obtiene las transacciones de la wallet. El id se debe reemplazar por el id de la base de datos del wallet que quieres consultar las estadísticas.
