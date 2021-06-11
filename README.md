@@ -90,4 +90,4 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
 
   Método: GET
 
-  Obtiene las transacciones de la wallet. El id se debe reemplazar por el id de la base de datos del wallet que quieres consultar las estadísticas.
+  Obtiene las transacciones de la wallet. El id se debe reemplazar por el id de la base de datos del wallet que quieres consultar las transacciones.
