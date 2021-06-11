@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "d5bac48f-7939-4f41-a6cf-b3b085c812b3",
+		"name": "iobuilders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllWallets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallet/getAllWallets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"getAllWallets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createWallet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallet/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWalletStats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallet/get/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"get",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createWalletWithKey",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "33866c4801f2527066ed8175c474c719ba88f4682854e0680d1fb1d881712132",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/wallet/createWalletWithKey",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"createWalletWithKey"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deposit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallet/deposit?id=5&amount=200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"deposit"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						},
+						{
+							"key": "amount",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "withdraw",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallet/withdraw?id=5&amount=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"withdraw"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						},
+						{
+							"key": "amount",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallet/transfer?from=5&to=0x563033ece974d1a047988f6901dcb98963704743&amount=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "5"
+						},
+						{
+							"key": "to",
+							"value": "0x563033ece974d1a047988f6901dcb98963704743"
+						},
+						{
+							"key": "amount",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getContractBalance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallet/getContractBalance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"getContractBalance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWalletTransactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallet/getWalletTransactions/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"getWalletTransactions",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
