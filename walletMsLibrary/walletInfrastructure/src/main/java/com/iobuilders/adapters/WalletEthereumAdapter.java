@@ -287,7 +287,7 @@ public class WalletEthereumAdapter implements WalletBlockchainPort{
 				transactions.forEach(tx -> {
 					  EthBlock.TransactionObject transaction = (EthBlock.TransactionObject) tx.get();
 
-					  if(transaction.getFrom().equalsIgnoreCase(creds.getAddress()) || transaction.getTo().equalsIgnoreCase(creds.getAddress()))
+					  if( (transaction.getFrom() != null && transaction.getFrom().equalsIgnoreCase(creds.getAddress())) || ( transaction.getTo() != null && transaction.getTo().equalsIgnoreCase(creds.getAddress())))
 						  finalTxs.add(tx);
 					});
 			}
