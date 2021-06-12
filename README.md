@@ -23,7 +23,7 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
 ```
 ## Pasos
 1. Levantar el servidor de Ganache.
-2. Desplegar el contrato inteligente en el servidor de Ganache.
+2. Desplegar el contrato inteligente en el servidor de Ganache. (el contrato está [aquí](walletMsLibrary/walletMsLauncher/src/main/resources/contract) y se llama <strong>ERC20.sol</strong>)
 3. Levantar o tener levantada la base de datos.
 4. Tener cuentas en Ganache con algo de Ether.
 5. Modificar los datos presentados anteriormente en el application.properties.
