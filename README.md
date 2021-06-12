@@ -23,7 +23,7 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
 ```
 ## Pasos
 1. Levantar el servidor de Ganache.
-2. Desplegar el contrato inteligente en el servidor de Ganache. (el contrato está [aquí](walletMsLibrary/walletMsLauncher/src/main/resources/contract) y se llama [<strong>EIP20.sol</strong>](walletMsLibrary/walletMsLauncher/src/main/resources/contract/EIP20.sol))
+2. Desplegar el contrato inteligente en el servidor de Ganache. (el contrato ERC20 está [aquí](walletMsLibrary/walletMsLauncher/src/main/resources/contract) y se llama [<strong>EIP20.sol</strong>](walletMsLibrary/walletMsLauncher/src/main/resources/contract/EIP20.sol))
 3. Levantar o tener levantada la base de datos.
 4. Tener cuentas en Ganache con algo de Ether.
 5. Modificar los datos presentados anteriormente en el application.properties.
@@ -42,7 +42,7 @@ Todos los endpoints dan la respuesta en formato JSON.
 - <strong>/createWalletWithKey</strong>
 
   Método: POST
-  Body: una cadena de caracteres con la clave privada de la cuenta.
+  Body: una cadena de caracteres con la clave privada de la wallet.
   
   Crea un wallet con la clave privada que le pases en el cuerpo de la petición.
   Retorna un JSON con los campos de la clase <strong>WalletDto</strong>.
