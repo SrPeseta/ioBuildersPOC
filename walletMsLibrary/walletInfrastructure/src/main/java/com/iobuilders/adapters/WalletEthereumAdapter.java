@@ -97,11 +97,12 @@ public class WalletEthereumAdapter implements WalletBlockchainPort{
 	public WalletDto createWalletWithKey(String key) {
 		WalletDto retorno = new WalletDto();
 		try {
-	        
+			Credentials cres = Credentials.create(key);
 	        retorno.setPrivateKey(key);
 
 	    } catch(Exception e) {
-	        System.err.println("Error: " + e.getMessage());
+	        logger.error("Clave privada inválida");
+	        return null;
 	    }
 		
 		
