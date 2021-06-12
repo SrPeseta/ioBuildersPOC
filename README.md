@@ -5,7 +5,7 @@ Para poder ejecutar la prueba de concepto necesitamos:
 - El IDE Eclipse.
 - La versión de Java 8.
 - Tener instalado el plugin de Spring en Eclipse
-- Incluir el jar de PostgreSQL de la raíz del repositorio en el classpath.
+- Incluir el [jar de PostgreSQL](postgresql-42.2.20.jar) de la raíz del repositorio en el classpath.
 - Una base de datos PostgreSQL (versión 12.7).
 - El programa de Ganache (versión 2.5.4) para simular una red blockchain.
 - Tener el programa Postman para realizar las peticiones a la API.
@@ -27,6 +27,9 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
 3. Levantar o tener levantada la base de datos.
 4. Tener cuentas en Ganache con algo de Ether.
 5. Modificar los datos presentados anteriormente en el application.properties.
+6. Importar en Postman el [json](iobuilders.postman_collection.json)
+7. Levantar el microservicio.
+8. Probar peticiones con la API en el Postman.
 
 ## Endpoints de la API
 - <strong>/create</strong>
@@ -87,4 +90,4 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
 
   Método: GET
 
-  Obtiene las transacciones de la wallet. El id se debe reemplazar por el id de la base de datos del wallet que quieres consultar las estadísticas.
+  Obtiene las transacciones de la wallet. El id se debe reemplazar por el id de la base de datos del wallet que quieres consultar las transacciones.
