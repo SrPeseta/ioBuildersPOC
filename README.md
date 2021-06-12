@@ -32,32 +32,38 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
 8. Probar peticiones con la API en el Postman.
 
 ## Endpoints de la API
+Todos los endpoints dan la respuesta en formato JSON.
 - <strong>/create</strong>
   
   Método: GET
   
   Crea un wallet con una clave privada aleatoria.
+  Retorna un JSON con los campos de la clase <strong>WalletDto</strong>.
 - <strong>/createWalletWithKey</strong>
 
   Método: POST
   Body: una cadena de caracteres con la clave privada de la cuenta.
   
   Crea un wallet con la clave privada que le pases en el cuerpo de la petición.
+  Retorna un JSON con los campos de la clase <strong>WalletDto</strong>.
 - <strong>/get/{id}</strong>
 
   Método: GET
   
   Obtiene estadísticas o datos relevantes del wallet. El id se debe reemplazar por el id de la base de datos del wallet que quieres consultar las estadísticas.
+  Retorna un JSON con los campos de la clase <strong>WalletStatsDto</strong>.
 - <strong>/getContractBalance</strong>
 
   Método: GET
   
   Obtiene el balance del contrato (número de tokens).
+  Retorna un <strong>BigInteger</strong>.
 - <strong>/getAllWallets</strong>
 
   Método: GET
   
   Obtiene todos los wallets en la base de datos y los devuelve.
+  Retorna un JSON con una lista de <strong>WalletDto</strong>.
 - <strong>/deposit</strong>
 
   Método: GET
@@ -67,6 +73,7 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
   - amount: cantidad de tokens a depositar
 
   Deposita un número de tokens en el wallet.
+  Retorna un JSON con los campos de la clase <strong>TransactionReceipt</strong>.
 - <strong>/withdraw</strong>
 
   Método: GET
@@ -76,6 +83,7 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
   - amount: cantidad de tokens a sacar
 
   Saca un numero de tokens del wallet.
+  Retorna un JSON con los campos de la clase <strong>TransactionReceipt</strong>.
 - <strong>/transfer</strong>
 
   Método: GET
@@ -86,8 +94,10 @@ gasPrice=<precio del gas en hexadecimal (sin el 0x de delante)>
   - amount:cantidad de tokens a transferir.
   
   Transferencia de tokens de un wallet a una cuenta.
+  Retorna un JSON con los campos de la clase <strong>TransactionReceipt</strong>.
 - <strong>/getWalletTransactions/{id}</strong>
 
   Método: GET
 
   Obtiene las transacciones de la wallet. El id se debe reemplazar por el id de la base de datos del wallet que quieres consultar las transacciones.
+  Retorna un JSON con una lista de elementos de la clase <strong>TransactionResult</strong>.
